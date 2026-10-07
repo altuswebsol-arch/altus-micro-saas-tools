@@ -1,0 +1,202 @@
+/* Altus School Website Compliance Checker — frontend styles.
+   Altus blue branding, mobile responsive, subtle animations. */
+
+.asc-root {
+    --asc-blue: #1450b8;
+    --asc-blue-dark: #0d3a8a;
+    --asc-blue-light: #e8f0fd;
+    --asc-green: #17803d;
+    --asc-amber: #b26a00;
+    --asc-red: #c0392b;
+    --asc-ink: #1a2333;
+    --asc-muted: #5b6577;
+    --asc-line: #e3e8f0;
+    --asc-radius: 12px;
+    max-width: 760px;
+    margin: 2rem auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--asc-ink);
+}
+
+.asc-card {
+    background: #fff;
+    border: 1px solid var(--asc-line);
+    border-radius: var(--asc-radius);
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(20, 80, 184, 0.08);
+    animation: asc-fade-up 0.5s ease both;
+}
+
+@keyframes asc-fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.asc-badge {
+    display: inline-block;
+    background: var(--asc-blue-light);
+    color: var(--asc-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.asc-title { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.75rem; color: var(--asc-ink); }
+.asc-sub { color: var(--asc-muted); line-height: 1.6; margin: 0 0 1.25rem; }
+.asc-h3 { font-size: 1.2rem; margin: 1.75rem 0 0.75rem; color: var(--asc-ink); }
+
+.asc-label { display: block; font-weight: 600; font-size: 0.9rem; margin: 1rem 0 0.4rem; }
+.asc-optional { font-weight: 400; color: var(--asc-muted); font-size: 0.8rem; }
+
+.asc-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--asc-line);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+.asc-input:focus { outline: none; border-color: var(--asc-blue); box-shadow: 0 0 0 3px rgba(20, 80, 184, 0.15); }
+
+.asc-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    background: var(--asc-blue);
+    color: #fff;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.95rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    text-align: center;
+}
+.asc-btn:hover { background: var(--asc-blue-dark); color: #fff; }
+.asc-btn:active { transform: scale(0.98); }
+.asc-btn[disabled] { opacity: 0.65; cursor: wait; }
+.asc-btn-link { display: inline-block; }
+
+.asc-error {
+    color: var(--asc-red);
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    font-weight: 600;
+}
+
+.asc-fineprint { font-size: 0.8rem; color: var(--asc-muted); margin-top: 1.25rem; }
+
+/* Scanning progress */
+.asc-spinner {
+    width: 52px; height: 52px;
+    border: 5px solid var(--asc-blue-light);
+    border-top-color: var(--asc-blue);
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    animation: asc-spin 0.9s linear infinite;
+}
+@keyframes asc-spin { to { transform: rotate(360deg); } }
+#asc-step-scan { text-align: center; }
+
+.asc-progress {
+    height: 10px; background: var(--asc-blue-light);
+    border-radius: 999px; overflow: hidden; margin: 1rem 0;
+}
+.asc-progress-bar {
+    height: 100%; width: 5%;
+    background: linear-gradient(90deg, var(--asc-blue), #4d8dff);
+    border-radius: 999px;
+    transition: width 0.6s ease;
+}
+
+/* Score display */
+.asc-score-wrap { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 0.5rem; }
+.asc-score-ring {
+    width: 120px; height: 120px; flex: 0 0 120px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: conic-gradient(var(--asc-blue) calc(var(--asc-p, 0) * 1%), var(--asc-blue-light) 0);
+    font-size: 2rem; font-weight: 800; color: var(--asc-ink);
+    position: relative;
+}
+.asc-score-ring::before {
+    content: ""; position: absolute; inset: 12px;
+    background: #fff; border-radius: 50%;
+}
+.asc-score-ring span { position: relative; }
+.asc-score-ring .asc-score-pct { font-size: 1rem; font-weight: 600; color: var(--asc-muted); }
+.asc-score-ring-sm { width: 84px; height: 84px; flex-basis: 84px; font-size: 1.4rem; }
+.asc-score-ring-sm::before { inset: 9px; }
+
+.asc-grade {
+    display: inline-block;
+    font-size: 1.6rem; font-weight: 800; color: var(--asc-blue);
+    background: var(--asc-blue-light);
+    padding: 0.2rem 1rem; border-radius: 8px; margin-bottom: 0.5rem;
+}
+
+.asc-issues { list-style: none; margin: 0; padding: 0; }
+.asc-issues li {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--asc-line);
+    border-left: 4px solid var(--asc-red);
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    animation: asc-fade-up 0.4s ease both;
+}
+.asc-issues li:nth-child(2) { animation-delay: 0.08s; }
+.asc-issues li:nth-child(3) { animation-delay: 0.16s; }
+.asc-issues li.asc-warn { border-left-color: var(--asc-amber); }
+.asc-issue-label { font-weight: 700; }
+.asc-issue-status { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.asc-issue-status.missing { color: var(--asc-red); }
+.asc-issue-status.uncertain { color: var(--asc-amber); }
+.asc-issue-why { color: var(--asc-muted); font-size: 0.9rem; margin-top: 0.25rem; }
+
+.asc-unlock {
+    margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 2px dashed var(--asc-line);
+}
+
+/* Full report */
+.asc-report-head { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+.asc-table-wrap { overflow-x: auto; margin: 1rem 0; }
+.asc-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.asc-table th {
+    text-align: left; padding: 0.7rem;
+    border-bottom: 2px solid var(--asc-blue);
+    color: var(--asc-blue-dark); font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.04em;
+}
+.asc-table td { padding: 0.7rem; border-bottom: 1px solid var(--asc-line); vertical-align: top; }
+.asc-table tr { animation: asc-fade-up 0.35s ease both; }
+.asc-status { font-weight: 700; font-size: 0.85rem; white-space: nowrap; }
+.asc-status.found { color: var(--asc-green); }
+.asc-status.uncertain { color: var(--asc-amber); }
+.asc-status.missing { color: var(--asc-red); }
+.asc-why { color: var(--asc-muted); font-size: 0.85rem; }
+
+.asc-cta {
+    margin-top: 2rem; padding: 1.75rem;
+    background: linear-gradient(135deg, var(--asc-blue-light), #f4f8ff);
+    border-radius: var(--asc-radius);
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    .asc-card { padding: 1.4rem; }
+    .asc-title { font-size: 1.4rem; }
+    .asc-score-wrap { flex-direction: column; text-align: center; }
+    .asc-report-head { flex-direction: column; text-align: center; }
+    .asc-btn { width: 100%; box-sizing: border-box; }
+}
+.asc-rec-tag { font-size: 0.7rem; color: #5b6470; border: 1px solid #c9d2dd; border-radius: 4px; padding: 1px 6px; font-weight: 600; white-space: nowrap; background: #f4f6f9; }
+
+/* Altus fix 2026-10-05: theme forces .page-body h2/h3 white — keep card headings dark on white cards */
+.page-body .asc-card h2, .page-body .asc-card h3 { color: #0f2033; }

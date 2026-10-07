@@ -1,0 +1,194 @@
+/* Altus Review Link Generator — Altus blue house style. */
+.arlg-root {
+    font-family: 'Poppins', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: #0a1f40;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 8px 4px 32px;
+}
+.arlg-card {
+    background: #ffffff;
+    border: 1px solid #e2eaf8;
+    border-radius: 18px;
+    padding: 36px 36px 32px;
+    box-shadow: 0 12px 40px rgba(10, 31, 64, 0.08);
+}
+.arlg-badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #2e6bff;
+    background: #eef3ff;
+    border: 1px solid #c9d8ff;
+    border-radius: 999px;
+    padding: 7px 16px;
+    margin-bottom: 16px;
+}
+.arlg-title {
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 700;
+    color: #0a1f40;
+    margin: 0 0 10px;
+}
+.arlg-sub {
+    font-size: 16px;
+    line-height: 1.65;
+    color: #4a5b7c;
+    margin: 0 0 22px;
+}
+.arlg-field { margin-bottom: 20px; }
+.arlg-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a1f40;
+    margin-bottom: 8px;
+}
+.arlg-optional { font-weight: 400; color: #6b7d9e; font-size: 12px; }
+.arlg-input, .arlg-textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    color: #0a1f40;
+    background: #f7faff;
+    border: 2px solid #d7e2f7;
+    border-radius: 12px;
+    padding: 13px 16px;
+    box-sizing: border-box;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+.arlg-input:focus, .arlg-textarea:focus {
+    outline: none;
+    border-color: #2e6bff;
+    box-shadow: 0 0 0 4px rgba(46, 107, 255, 0.15);
+    background: #ffffff;
+}
+.arlg-hint {
+    font-size: 13px;
+    color: #6b7d9e;
+    margin: 8px 0 0;
+    line-height: 1.55;
+}
+.arlg-error {
+    font-size: 14px;
+    color: #c81e3a;
+    background: #fdeef1;
+    border: 1px solid #f6c9d3;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin: 10px 0 0;
+}
+.arlg-btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.arlg-btn {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2e6bff 0%, #00c2ff 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+}
+.arlg-btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(46, 107, 255, 0.35); }
+.arlg-btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.arlg-btn-secondary {
+    background: #ffffff;
+    color: #2e6bff;
+    border: 2px solid #2e6bff;
+}
+.arlg-btn-secondary:hover { box-shadow: 0 8px 22px rgba(46, 107, 255, 0.18); }
+
+/* "How do I find my Place ID?" disclosure */
+.arlg-how { margin-top: 22px; border-top: 1px solid #e8eefb; padding-top: 18px; }
+.arlg-how-toggle {
+    background: none; border: none; padding: 0; cursor: pointer;
+    font-family: inherit; font-size: 15px; font-weight: 600; color: #2e6bff;
+}
+.arlg-how-toggle:hover { text-decoration: underline; }
+.arlg-how-body { margin-top: 12px; }
+.arlg-steps { margin: 0; padding-left: 22px; font-size: 15px; line-height: 1.7; color: #4a5b7c; }
+.arlg-steps li { margin-bottom: 8px; }
+.arlg-steps a { color: #2e6bff; font-weight: 600; }
+
+/* Results */
+.arlg-linkbox {
+    background: #f7faff;
+    border: 2px dashed #b9ccf5;
+    border-radius: 12px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+}
+.arlg-linkbox a {
+    color: #2e6bff;
+    font-size: 14px;
+    font-weight: 500;
+    word-break: break-all;
+    line-height: 1.6;
+    text-decoration: none;
+}
+.arlg-linkbox a:hover { text-decoration: underline; }
+.arlg-note {
+    font-size: 13px; color: #6b7d9e; font-style: italic; margin: 0 0 18px;
+}
+.arlg-qr-row {
+    display: flex;
+    gap: 28px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 24px 0 8px;
+}
+.arlg-qr-frame {
+    background: #ffffff;
+    border: 1px solid #e2eaf8;
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 6px 20px rgba(10, 31, 64, 0.07);
+    text-align: center;
+}
+#arlg-qr { width: 220px; height: 220px; margin: 0 auto; }
+#arlg-qr img, #arlg-qr canvas, #arlg-qr table { max-width: 100%; }
+.arlg-qr-caption { font-size: 12px; color: #6b7d9e; margin: 10px 0 0; }
+.arlg-qr-opts { flex: 1; min-width: 220px; }
+.arlg-qr-opts .arlg-label { margin-bottom: 6px; }
+.arlg-color-row { display: flex; gap: 18px; margin-bottom: 16px; flex-wrap: wrap; }
+.arlg-color-field { display: flex; align-items: center; gap: 8px; font-size: 14px; color: #4a5b7c; }
+.arlg-color-field input[type="color"] {
+    width: 44px; height: 36px; border: 2px solid #d7e2f7; border-radius: 8px;
+    background: #fff; padding: 2px; cursor: pointer;
+}
+.arlg-linklabel { font-size: 13px; font-weight: 600; color: #6b7d9e; margin: 22px 0 8px; letter-spacing: .4px; }
+.arlg-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 22px; }
+.arlg-fineprint { font-size: 13px; line-height: 1.6; color: #6b7d9e; margin: 26px 0 0; }
+
+/* Email gate */
+.arlg-gate {
+    margin-top: 28px;
+    background: linear-gradient(135deg, #0a1f40 0%, #14305e 100%);
+    border-radius: 14px;
+    padding: 28px 28px 26px;
+    color: #ffffff;
+}
+.arlg-gate h3 { color: #ffffff; font-size: 20px; margin: 0 0 8px; }
+.arlg-gate p { color: #b2c0d8; font-size: 14px; line-height: 1.6; margin: 0 0 18px; }
+.arlg-gate .arlg-label { color: #ffffff; }
+.arlg-gate .arlg-input { background: #ffffff; }
+.arlg-gate-done { text-align: center; padding: 10px 0 4px; }
+.arlg-tick {
+    width: 56px; height: 56px; margin: 0 auto 14px; border-radius: 50%;
+    background: linear-gradient(135deg, #2e6bff, #00c2ff);
+    color: #fff; font-size: 28px; font-weight: 700; line-height: 56px;
+}
+
+@media (max-width: 560px) {
+    .arlg-card { padding: 24px 20px; }
+    .arlg-title { font-size: 24px; }
+    .arlg-qr-row { flex-direction: column; }
+}
+
+/* Altus fix 2026-10-05: theme forces .page-body h2/h3 white — keep card headings dark on white cards */
+.page-body .arlg-card h2, .page-body .arlg-card h3 { color: #0f2033; }

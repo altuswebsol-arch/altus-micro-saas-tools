@@ -1,0 +1,202 @@
+/* Altus Website Grader — frontend styles.
+   Altus blue branding, mobile responsive, subtle animations. */
+
+.awg-root {
+    --awg-blue: #1450b8;
+    --awg-blue-dark: #0d3a8a;
+    --awg-blue-light: #e8f0fd;
+    --awg-green: #17803d;
+    --awg-amber: #b26a00;
+    --awg-red: #c0392b;
+    --awg-ink: #1a2333;
+    --awg-muted: #5b6577;
+    --awg-line: #e3e8f0;
+    --awg-radius: 12px;
+    max-width: 760px;
+    margin: 2rem auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--awg-ink);
+}
+
+.awg-card {
+    background: #fff;
+    border: 1px solid var(--awg-line);
+    border-radius: var(--awg-radius);
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(20, 80, 184, 0.08);
+    animation: awg-fade-up 0.5s ease both;
+}
+
+@keyframes awg-fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.awg-badge {
+    display: inline-block;
+    background: var(--awg-blue-light);
+    color: var(--awg-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1rem;
+}
+
+.awg-title { font-size: 1.75rem; line-height: 1.25; margin: 0 0 0.75rem; color: var(--awg-ink); }
+.awg-sub { color: var(--awg-muted); line-height: 1.6; margin: 0 0 1.25rem; }
+.awg-h3 { font-size: 1.2rem; margin: 1.75rem 0 0.75rem; color: var(--awg-ink); }
+
+.awg-label { display: block; font-weight: 600; font-size: 0.9rem; margin: 1rem 0 0.4rem; }
+.awg-optional { font-weight: 400; color: var(--awg-muted); font-size: 0.8rem; }
+
+.awg-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border: 2px solid var(--awg-line);
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+.awg-input:focus { outline: none; border-color: var(--awg-blue); box-shadow: 0 0 0 3px rgba(20, 80, 184, 0.15); }
+
+.awg-btn {
+    display: inline-block;
+    margin-top: 1.25rem;
+    background: var(--awg-blue);
+    color: #fff;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.95rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    text-align: center;
+}
+.awg-btn:hover { background: var(--awg-blue-dark); color: #fff; }
+.awg-btn:active { transform: scale(0.98); }
+.awg-btn[disabled] { opacity: 0.65; cursor: wait; }
+.awg-btn-link { display: inline-block; }
+
+.awg-error {
+    color: var(--awg-red);
+    font-size: 0.9rem;
+    margin-top: 0.75rem;
+    font-weight: 600;
+}
+
+.awg-fineprint { font-size: 0.8rem; color: var(--awg-muted); margin-top: 1.25rem; }
+
+/* Scanning progress */
+.awg-spinner {
+    width: 52px; height: 52px;
+    border: 5px solid var(--awg-blue-light);
+    border-top-color: var(--awg-blue);
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    animation: awg-spin 0.9s linear infinite;
+}
+@keyframes awg-spin { to { transform: rotate(360deg); } }
+#awg-step-scan { text-align: center; }
+
+.awg-progress {
+    height: 10px; background: var(--awg-blue-light);
+    border-radius: 999px; overflow: hidden; margin: 1rem 0;
+}
+.awg-progress-bar {
+    height: 100%; width: 5%;
+    background: linear-gradient(90deg, var(--awg-blue), #4d8dff);
+    border-radius: 999px;
+    transition: width 0.6s ease;
+}
+
+/* Score display */
+.awg-score-wrap { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 0.5rem; }
+.awg-score-ring {
+    width: 120px; height: 120px; flex: 0 0 120px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: conic-gradient(var(--awg-blue) calc(var(--awg-p, 0) * 1%), var(--awg-blue-light) 0);
+    font-size: 2rem; font-weight: 800; color: var(--awg-ink);
+    position: relative;
+}
+.awg-score-ring::before {
+    content: ""; position: absolute; inset: 12px;
+    background: #fff; border-radius: 50%;
+}
+.awg-score-ring span { position: relative; }
+.awg-score-ring .awg-score-pct { font-size: 1rem; font-weight: 600; color: var(--awg-muted); }
+.awg-score-ring-sm { width: 84px; height: 84px; flex-basis: 84px; font-size: 1.4rem; }
+.awg-score-ring-sm::before { inset: 9px; }
+
+.awg-grade {
+    display: inline-block;
+    font-size: 1.6rem; font-weight: 800; color: var(--awg-blue);
+    background: var(--awg-blue-light);
+    padding: 0.2rem 1rem; border-radius: 8px; margin-bottom: 0.5rem;
+}
+
+.awg-issues { list-style: none; margin: 0; padding: 0; }
+.awg-issues li {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--awg-line);
+    border-left: 4px solid var(--awg-red);
+    border-radius: 8px;
+    margin-bottom: 0.6rem;
+    animation: awg-fade-up 0.4s ease both;
+}
+.awg-issues li:nth-child(2) { animation-delay: 0.08s; }
+.awg-issues li:nth-child(3) { animation-delay: 0.16s; }
+.awg-issues li.awg-warn { border-left-color: var(--awg-amber); }
+.awg-issue-label { font-weight: 700; }
+.awg-issue-status { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.awg-issue-status.fail { color: var(--awg-red); }
+.awg-issue-status.improve { color: var(--awg-amber); }
+.awg-issue-why { color: var(--awg-muted); font-size: 0.9rem; margin-top: 0.25rem; }
+
+.awg-unlock {
+    margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 2px dashed var(--awg-line);
+}
+
+/* Full report */
+.awg-report-head { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 1rem; }
+.awg-table-wrap { overflow-x: auto; margin: 1rem 0; }
+.awg-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+.awg-table th {
+    text-align: left; padding: 0.7rem;
+    border-bottom: 2px solid var(--awg-blue);
+    color: var(--awg-blue-dark); font-size: 0.85rem;
+    text-transform: uppercase; letter-spacing: 0.04em;
+}
+.awg-table td { padding: 0.7rem; border-bottom: 1px solid var(--awg-line); vertical-align: top; }
+.awg-table tr { animation: awg-fade-up 0.35s ease both; }
+.awg-status { font-weight: 700; font-size: 0.85rem; white-space: nowrap; }
+.awg-status.good { color: var(--awg-green); }
+.awg-status.improve { color: var(--awg-amber); }
+.awg-status.fail { color: var(--awg-red); }
+.awg-detail { color: var(--awg-ink); font-size: 0.88rem; margin-top: 0.2rem; font-weight: 600; }
+.awg-why { color: var(--awg-muted); font-size: 0.85rem; margin-top: 0.2rem; }
+
+.awg-cta {
+    margin-top: 2rem; padding: 1.75rem;
+    background: linear-gradient(135deg, var(--awg-blue-light), #f4f8ff);
+    border-radius: var(--awg-radius);
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+    .awg-card { padding: 1.4rem; }
+    .awg-title { font-size: 1.4rem; }
+    .awg-score-wrap { flex-direction: column; text-align: center; }
+    .awg-report-head { flex-direction: column; text-align: center; }
+    .awg-btn { width: 100%; box-sizing: border-box; }
+}
+
+/* Altus fix 2026-10-05: theme forces .page-body h2/h3 white — keep card headings dark on white cards */
+.page-body .awg-card h2, .page-body .awg-card h3 { color: #0f2033; }

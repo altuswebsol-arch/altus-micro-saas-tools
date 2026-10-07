@@ -1,0 +1,66 @@
+/* Altus QR Code Generator — frontend styles. Altus blue accents, clean cards. */
+.aqg-root { max-width: 760px; margin: 0 auto; font-size: 16px; line-height: 1.6; color: #1c2733; }
+.aqg-card { background: #fff; border: 1px solid #e3eaf3; border-radius: 14px; padding: 28px; margin: 0 0 22px; box-shadow: 0 4px 18px rgba(16, 179, 254, .07); }
+.aqg-badge { display: inline-block; background: #e8f7ff; color: #0b7fb8; font-weight: 600; font-size: 13px; padding: 5px 14px; border-radius: 999px; margin-bottom: 12px; letter-spacing: .02em; }
+.aqg-title { font-size: 26px; line-height: 1.3; margin: 0 0 10px; color: #0f2033; }
+.aqg-sub { color: #4b5b6e; margin: 0 0 18px; }
+.aqg-field { margin-bottom: 16px; }
+.aqg-field-row { display: flex; gap: 16px; flex-wrap: wrap; }
+.aqg-field-row .aqg-field { flex: 1 1 200px; }
+.aqg-label { display: block; font-weight: 600; margin-bottom: 6px; color: #0f2033; }
+.aqg-hint { font-size: 14px; color: #6b7a8d; margin: 6px 0 0; }
+.aqg-input { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #d3dde8; border-radius: 9px; font-size: 16px; font-family: inherit; color: #1c2733; background: #fff; }
+.aqg-input:focus { outline: none; border-color: #10b3fe; box-shadow: 0 0 0 3px rgba(16, 179, 254, .15); }
+.aqg-textarea { resize: vertical; min-height: 76px; }
+.aqg-select { appearance: auto; }
+.aqg-error { color: #c0392b; font-size: 14px; margin: 6px 0 0; }
+.aqg-warn { background: #fff8e6; border: 1px solid #f0dc9a; color: #7a5c00; border-radius: 9px; padding: 10px 14px; font-size: 14px; margin: 8px 0; }
+.aqg-btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.aqg-btn { display: inline-block; background: #10b3fe; color: #fff; border: none; border-radius: 9px; padding: 13px 26px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; font-family: inherit; }
+.aqg-btn:hover { background: #0b9fe0; color: #fff; }
+.aqg-btn:disabled { opacity: .6; cursor: wait; }
+.aqg-btn-secondary { background: #eef3f8; color: #0f2033; }
+.aqg-btn-secondary:hover { background: #e0e9f2; color: #0f2033; }
+
+/* content-type tabs */
+.aqg-tabs { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 4px 0 16px; }
+.aqg-tab { border: 1.5px solid #d3dde8; background: #fff; border-radius: 10px; padding: 11px 4px; font-size: 14px; font-weight: 600; color: #0f2033; cursor: pointer; font-family: inherit; }
+.aqg-tab:hover { border-color: #10b3fe; }
+.aqg-tab.active { border-color: #10b3fe; background: #f2fbff; color: #0b7fb8; }
+.aqg-panels { margin-bottom: 4px; }
+
+/* options */
+.aqg-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; margin: 18px 0 6px; padding-top: 16px; border-top: 1px solid #eef3f8; }
+.aqg-color-row { display: flex; align-items: center; gap: 10px; }
+.aqg-color-row input[type="color"] { width: 52px; height: 42px; padding: 3px; border: 1.5px solid #d3dde8; border-radius: 9px; cursor: pointer; background: #fff; }
+.aqg-swatch { width: 32px; height: 32px; border-radius: 9px; border: 1px solid #d3dde8; cursor: pointer; padding: 0; }
+.aqg-check { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; color: #0f2033; cursor: pointer; }
+.aqg-check input { width: 18px; height: 18px; accent-color: #10b3fe; }
+.aqg-check-field { display: flex; align-items: flex-end; padding-bottom: 14px; }
+.aqg-quiet { margin: 4px 0 4px; }
+
+/* preview */
+.aqg-preview { display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap; margin: 18px 0 6px; padding: 18px; background: #fbfdff; border: 1px solid #e3eaf3; border-radius: 12px; }
+.aqg-canvas { width: 100%; max-width: 240px; height: auto; image-rendering: pixelated; border: 1px solid #e3eaf3; border-radius: 10px; background: #fff; flex-shrink: 0; }
+.aqg-preview-side { flex: 1 1 240px; }
+.aqg-info { font-size: 14px; color: #6b7a8d; margin: 2px 0 0; }
+
+/* email gate */
+.aqg-gate { border-top: 1px solid #e3eaf3; margin-top: 20px; padding-top: 20px; }
+.aqg-gate h3 { margin: 0 0 8px; font-size: 19px; color: #0f2033; }
+.aqg-gate p { color: #4b5b6e; }
+.aqg-gate-done { text-align: center; padding: 18px 0; }
+.aqg-tick { width: 54px; height: 54px; border-radius: 50%; background: #10b3fe; color: #fff; font-size: 30px; line-height: 54px; margin: 0 auto 12px; }
+.aqg-fineprint { font-size: 13.5px; color: #7b8a9d; margin-top: 16px; }
+
+@media (max-width: 600px) {
+    .aqg-card { padding: 20px 16px; }
+    .aqg-title { font-size: 22px; }
+    .aqg-tabs { grid-template-columns: repeat(3, 1fr); }
+    .aqg-options { grid-template-columns: 1fr; }
+    .aqg-btn { width: 100%; text-align: center; }
+    .aqg-canvas { max-width: 100%; }
+}
+
+/* Altus fix 2026-10-05: theme forces .page-body h2/h3 white — keep card headings dark on white cards */
+.page-body .aqg-card h2, .page-body .aqg-card h3 { color: #0f2033; }

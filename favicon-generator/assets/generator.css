@@ -1,0 +1,76 @@
+/* Altus Favicon Generator — frontend styles. Altus blue accents, clean cards. */
+.afcg-root { max-width: 760px; margin: 0 auto; font-size: 16px; line-height: 1.6; color: #1c2733; }
+.afcg-card { background: #fff; border: 1px solid #e3eaf3; border-radius: 14px; padding: 28px; margin: 0 0 22px; box-shadow: 0 4px 18px rgba(16, 179, 254, .07); }
+.afcg-badge { display: inline-block; background: #e8f7ff; color: #0b7fb8; font-weight: 600; font-size: 13px; padding: 5px 14px; border-radius: 999px; margin-bottom: 12px; letter-spacing: .02em; }
+.afcg-title { font-size: 26px; line-height: 1.3; margin: 0 0 10px; color: #0f2033; }
+.afcg-sub { color: #4b5b6e; margin: 0 0 18px; }
+.afcg-progress { height: 8px; background: #eef3f8; border-radius: 999px; overflow: hidden; margin-bottom: 14px; }
+.afcg-progress > div { height: 100%; width: 33%; background: linear-gradient(90deg, #10b3fe, #0b7fb8); border-radius: 999px; transition: width .3s ease; }
+.afcg-field { margin-bottom: 16px; }
+.afcg-label { display: block; font-weight: 600; margin-bottom: 6px; color: #0f2033; }
+.afcg-hint { font-size: 14px; color: #6b7a8d; margin: 6px 0 0; }
+.afcg-input { width: 100%; box-sizing: border-box; padding: 12px 14px; border: 1.5px solid #d3dde8; border-radius: 9px; font-size: 16px; }
+.afcg-input:focus { outline: none; border-color: #10b3fe; box-shadow: 0 0 0 3px rgba(16, 179, 254, .15); }
+.afcg-error { color: #c0392b; font-size: 14px; margin: 6px 0 0; }
+.afcg-warn { background: #fff8e6; border: 1px solid #f0dc9a; color: #7a5c00; border-radius: 9px; padding: 10px 14px; font-size: 14px; margin: 8px 0; }
+.afcg-btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.afcg-btn { display: inline-block; background: #10b3fe; color: #fff; border: none; border-radius: 9px; padding: 13px 26px; font-size: 16px; font-weight: 600; cursor: pointer; text-decoration: none; }
+.afcg-btn:hover { background: #0b9fe0; color: #fff; }
+.afcg-btn:disabled { opacity: .6; cursor: wait; }
+.afcg-btn-secondary { background: #eef3f8; color: #0f2033; }
+.afcg-btn-secondary:hover { background: #e0e9f2; color: #0f2033; }
+.afcg-btn-sm { padding: 8px 16px; font-size: 14px; flex-shrink: 0; }
+
+/* dropzone */
+.afcg-drop { border: 2px dashed #b9c9db; border-radius: 12px; padding: 44px 20px; text-align: center; cursor: pointer; transition: border-color .15s, background .15s; background: #fbfdff; }
+.afcg-drop:hover, .afcg-drop.afcg-dragover { border-color: #10b3fe; background: #f2fbff; }
+.afcg-drop-icon { font-size: 40px; display: block; margin-bottom: 10px; }
+.afcg-drop strong { display: block; color: #0f2033; font-size: 18px; margin-bottom: 4px; }
+.afcg-drop span { color: #6b7a8d; font-size: 14px; }
+
+/* option cards */
+.afcg-opt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 6px 0 4px; }
+.afcg-opt-card { display: flex; flex-direction: column; align-items: center; gap: 8px; border: 1.5px solid #d3dde8; border-radius: 10px; padding: 12px 8px; cursor: pointer; font-size: 13.5px; font-weight: 600; color: #0f2033; }
+.afcg-opt-card:hover { border-color: #10b3fe; }
+.afcg-opt-card.checked { border-color: #10b3fe; background: #f2fbff; }
+.afcg-opt-card input { position: absolute; opacity: 0; pointer-events: none; }
+.afcg-swatch { width: 34px; height: 34px; border-radius: 8px; border: 1px solid #d3dde8; }
+.afcg-swatch-trans { background: repeating-conic-gradient(#dbe4ee 0% 25%, #fff 0% 50%) 0 0 / 16px 16px; }
+
+/* previews */
+.afcg-preview-row { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start; margin: 18px 0; }
+.afcg-tabmock { background: #f1f4f8; border: 1px solid #dfe7f0; border-bottom: none; border-radius: 10px 10px 0 0; padding: 10px 14px 0; width: 240px; }
+.afcg-tab { background: #fff; border-radius: 8px 8px 0 0; padding: 8px 12px; display: flex; align-items: center; gap: 8px; font-size: 13px; color: #3c4a5c; box-shadow: 0 -1px 3px rgba(0,0,0,.06); }
+.afcg-tab img { width: 16px; height: 16px; image-rendering: auto; }
+.afcg-tab .afcg-x { margin-left: auto; color: #9aa8ba; }
+.afcg-tabcap { font-size: 13px; color: #6b7a8d; margin: 6px 0 0; }
+.afcg-size-previews { display: flex; gap: 16px; flex-wrap: wrap; }
+.afcg-size-prev { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 13px; color: #6b7a8d; }
+.afcg-size-box { border: 1px solid #e3eaf3; border-radius: 10px; padding: 10px; background: #fff; line-height: 0; }
+.afcg-checker { background: repeating-conic-gradient(#e6edf5 0% 25%, #fff 0% 50%) 0 0 / 16px 16px; }
+
+/* results */
+.afcg-file-list { border: 1px solid #e3eaf3; border-radius: 10px; overflow: hidden; margin: 14px 0 20px; }
+.afcg-file-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #eef3f8; font-size: 15px; }
+.afcg-file-row:last-child { border-bottom: none; }
+.afcg-file-row span { color: #0f2033; }
+.afcg-snippet { background: #0f2033; color: #d7e6f5; border-radius: 10px; padding: 16px 18px; font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.7; overflow-x: auto; white-space: pre; margin: 10px 0 6px; }
+.afcg-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0 22px; }
+.afcg-h3 { font-size: 18px; color: #0f2033; margin: 24px 0 8px; }
+.afcg-gate { border-top: 1px solid #e3eaf3; margin-top: 20px; padding-top: 20px; }
+.afcg-gate h3 { margin: 0 0 8px; font-size: 19px; color: #0f2033; }
+.afcg-gate p { color: #4b5b6e; }
+.afcg-gate-done { text-align: center; padding: 18px 0; }
+.afcg-tick { width: 54px; height: 54px; border-radius: 50%; background: #10b3fe; color: #fff; font-size: 30px; line-height: 54px; margin: 0 auto 12px; }
+.afcg-fineprint { font-size: 13.5px; color: #7b8a9d; margin-top: 16px; }
+
+@media (max-width: 600px) {
+    .afcg-card { padding: 20px 16px; }
+    .afcg-title { font-size: 22px; }
+    .afcg-opt-grid { grid-template-columns: repeat(2, 1fr); }
+    .afcg-btn { width: 100%; text-align: center; }
+    .afcg-file-row { flex-direction: column; align-items: stretch; }
+}
+
+/* Altus fix 2026-10-05: theme forces .page-body h2/h3 white — keep card headings dark on white cards */
+.page-body .afcg-card h2, .page-body .afcg-card h3 { color: #0f2033; }
